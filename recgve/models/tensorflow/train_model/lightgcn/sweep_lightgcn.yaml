@@ -1,0 +1,17 @@
+method: random
+metric:
+  goal: maximize
+  name: Recall@20
+parameters:
+  learning_rate:
+    values: [1e-2, 1e-3, 1e-4]
+  embedding_size:
+    values: [64]
+  convolution_depth:
+    values: [3, 4]
+  l2_reg:
+    values: [0, 1e-3, 1e-4, 1e-5]
+  batch_size:
+    values: [1024]
+
+program: models/tensorflow/train_model/lightgcn/train_lightgcn.py

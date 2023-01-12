@@ -1,0 +1,20 @@
+method: grid
+metric:
+  goal: maximize
+  name: Recall@20
+early_terminate:
+  type: hyperband
+  min_iter: 3
+parameters:
+  learning_rate:
+    values: [1e-2, 1e-3, 1e-4, 1e-5]
+  embedding_size:
+    values: [64]
+  alpha:
+    values: [0, 0.2, 0.4, 0.6, 0.8, 1]
+  l2_reg:
+    values: [0, 1e-2, 1e-3, 1e-4, 1e-5]
+  batch_size:
+    values: [1024]
+
+program: models/tensorflow/train_model/fism/train_fism.py

@@ -1,0 +1,24 @@
+method: grid
+metric:
+  goal: maximize
+  name: Recall@20
+early_terminate:
+  type: hyperband
+  min_iter: 3
+parameters:
+  learning_rate:
+    values: [1e-5]
+  embedding_size:
+    values: [64]
+  convolution_depth:
+    values: [1, 2]
+  user_profile_dropout:
+    values: [0.0, 0.2, 0.4, 0.6, 0.8]
+  top_k:
+    values: [5, 20, 50, 100]
+  l2_reg:
+    values: [0]
+  batch_size:
+    values: [1024]
+
+program: models/tensorflow/train_model/igccf/train_igccf.py

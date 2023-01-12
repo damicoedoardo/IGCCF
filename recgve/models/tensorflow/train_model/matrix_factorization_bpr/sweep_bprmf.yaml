@@ -1,0 +1,17 @@
+method: bayes
+metric:
+  goal: maximize
+  name: Recall@20
+parameters:
+  learning_rate:
+    min: 1e-8
+    max: 1e-1
+  embedding_size:
+    values: [64]
+  l2_reg:
+    min: 0
+    max: 1e-8
+  batch_size:
+    values: [1024]
+
+program: models/tensorflow/train_model/matrix_factorization_bpr/train_matrix_factorization_bpr.py

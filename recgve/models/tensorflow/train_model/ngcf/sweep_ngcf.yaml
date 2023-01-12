@@ -1,0 +1,21 @@
+method: random
+metric:
+  goal: maximize
+  name: Recall@20
+parameters:
+  learning_rate:
+    values: [1e-3, 1e-4]
+  embedding_size:
+    values: [64]
+  l2_reg:
+    values: [0, 1e-4, 1e-5]
+  convolution_depth:
+    values: [3]
+  mess_dropout:
+    values: [0.0, 0.1, 0.2]
+  node_dropout:
+    values: [0.0, 0.1, 0.2]
+  batch_size:
+    values: [1024]
+
+program: models/tensorflow/train_model/ngcf/train_ngcf.py
