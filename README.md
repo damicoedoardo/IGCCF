@@ -1,5 +1,8 @@
 # IGCCF
 ![](IGCCF_architecture.png)
+
+Paper Link: https://link.springer.com/chapter/10.1007/978-3-031-28244-7_16
+
 ### Requirements
 To install all the required packages using the following command:
 	
