@@ -14,7 +14,6 @@ import wandb
 from data.tensorflow_data import TripletsBPRGenerator
 from evaluation.topk_evaluator import Evaluator
 from losses.tensorflow_losses import bpr_loss, l2_reg
-from models.tensorflow.igcmf import
 from models.tensorflow.igccf import IGCCF
 from utils.early_stopping import EarlyStoppingHandlerTensorFlow
 from utils import gpu_utils
