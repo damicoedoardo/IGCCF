@@ -26,11 +26,11 @@ if __name__ == "__main__":
     logger.info(f"Creating split for dataset: {DATASET}")
 
     pd_data = dataset.load()
-    pd_data = kcore(pd_data, k=5)
+    pd_data = kcore(pd_data, k=10)
     stats = get_dataset_stats(pd_data)
     print_dict(stats)
 
     splits_list = split_stratified(pd_data, ratio=[0.8, 0.1, 0.1])
     split_names = ["train", "val", "test"]
     split_dict = dict(zip(split_names, splits_list))
-    dataset.save_split(split_dict, split_name="kcore5_stratified")
+    dataset.save_split(split_dict, split_name="kcore10_stratified")
